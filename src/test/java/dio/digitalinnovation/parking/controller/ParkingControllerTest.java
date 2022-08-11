@@ -6,7 +6,7 @@ import org.hamcrest.Matchers;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.web.server.LocalServerPort;
+import org.springframework.boot.web.server.LocalServerPort;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 
@@ -21,7 +21,7 @@ public class ParkingControllerTest extends AbstractContainerBase {
         RestAssured.port = randomPort;
     }
 
-    /*@Test
+    @Test
     void whenFindAllThenCheckResult() {
         RestAssured.given()
                 .auth()
@@ -30,7 +30,7 @@ public class ParkingControllerTest extends AbstractContainerBase {
                 .get("/parking")
                 .then()
                 .statusCode(HttpStatus.OK.value());
-    }*/
+    }
 
     @Test
     void whenCreateThenCheckResult() {
